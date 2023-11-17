@@ -1,6 +1,8 @@
 import React from "react";
 import Logo from "@/component/Logo";
 import Currency from "@/component/Currency";
+import Balance from "@/component/Balance";
+import Finish from "@/component/Finish";
 
 const Confirm = () => {
   return (
@@ -16,7 +18,9 @@ const Confirm = () => {
           <li className="step step-primary">Finish</li>
         </ul>
       </div>
-      <Currency />
+      {/* <Currency /> */}
+      {/* <Balance /> */}
+      <Finish />
     </div>
   );
 };
