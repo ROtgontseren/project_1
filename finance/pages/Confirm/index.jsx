@@ -19,8 +19,8 @@ const Confirm = () => {
         </ul>
       </div>
       {/* <Currency /> */}
-      {/* <Balance /> */}
-      <Finish />
+      <Balance />
+      {/* <Finish /> */}
     </div>
   );
 };

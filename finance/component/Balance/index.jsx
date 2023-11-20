@@ -2,6 +2,7 @@ import React from "react";
 
 const Balance = () => {
   return (
+   <div className="flex justify-center items-center h-screen">
     <div className="flex flex-col justify-center items-center w-[600px] gap-6">
       <div className="bg-blue-600 rounded-full">
         <svg
@@ -24,10 +25,11 @@ const Balance = () => {
         class="input input-bordered w-full max-w-xs"
       />
       <h2>How much do you have in your wallet?</h2>
-      <button class="btn btn-primary w-3/4 rounded-3xl text-xl text-white">
+      <button class="btn btn-primary w-full rounded-3xl text-xl text-white">
         Confirm
       </button>
     </div>
+   </div>
   );
 };
 
