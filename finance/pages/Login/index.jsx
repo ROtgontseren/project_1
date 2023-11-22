@@ -18,14 +18,14 @@ const Login = () => {
           <input
             type="text"
             placeholder="Email"
-            class="input input-bordered w-screen max-w-xs bg-slate-100"
+            className="input input-bordered w-screen max-w-xs bg-slate-100"
           />
           <input
             type="text"
             placeholder="Password"
-            class="input input-bordered w-screen max-w-xs bg-slate-100"
+            className="input input-bordered w-screen max-w-xs bg-slate-100"
           />
-          <button class="btn btn-primary w-full rounded-3xl text-xl text-white">
+          <button className="btn btn-primary w-full rounded-3xl text-xl text-white">
             Log in
           </button>
           <div className="flex">

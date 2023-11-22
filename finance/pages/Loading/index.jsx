@@ -9,7 +9,7 @@ const Loading = () => {
         <h1 className="text-4xl font-bold">Geld</h1>
       </div>
       <div className="flex flex-col items-center">
-        <span class="loading loading-spinner text-primary"></span>
+        <span className="loading loading-spinner text-primary"></span>
         <h2 className="font-semibold">Түр хүлээнэ үү.....</h2>
       </div>
     </div>

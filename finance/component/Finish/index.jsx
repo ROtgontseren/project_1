@@ -25,7 +25,7 @@ const Finish = () => {
           continue to dashboard and start tracking
         </h2>
         <Link href={"../"}>
-          <button class="btn btn-primary w-full rounded-3xl text-xl text-white">
+          <button className="btn btn-primary w-full rounded-3xl text-xl text-white">
             Go to Dashboard
           </button>
         </Link>

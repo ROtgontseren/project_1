@@ -18,24 +18,24 @@ const Signup = () => {
           <input
             type="text"
             placeholder="Name"
-            class="input input-bordered w-screen max-w-xs bg-slate-100"
+            className="input input-bordered w-screen max-w-xs bg-slate-100"
           />
           <input
             type="text"
             placeholder="Email"
-            class="input input-bordered w-screen max-w-xs bg-slate-100"
+            className="input input-bordered w-screen max-w-xs bg-slate-100"
           />
           <input
             type="text"
             placeholder="Password"
-            class="input input-bordered w-screen max-w-xs bg-slate-100"
+            className="input input-bordered w-screen max-w-xs bg-slate-100"
           />
           <input
             type="text"
             placeholder="Re-password"
-            class="input input-bordered w-screen max-w-xs bg-slate-100"
+            className="input input-bordered w-screen max-w-xs bg-slate-100"
           />
-          <button class="btn btn-primary w-full rounded-3xl text-xl text-white">
+          <button className="btn btn-primary w-full rounded-3xl text-xl text-white">
             Sign up
           </button>
           <div className="flex">
