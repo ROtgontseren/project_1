@@ -48,7 +48,8 @@ const catadd = async (req, res) => {
 const catput = async (req, res) => {
   try {
     const { id } = req.body;
-    const users = await sql`SELECT * FROM categories WHERE id=${id}`;
+    const users =
+      await sql`UPDATE categories SET name,description,category_image,category_color WHERE id=${id}`;
     console.log("users", users);
     return res.status(200).json({ message: `${id} тай хэрэглэгч олдсон.` });
   } catch (error) {
