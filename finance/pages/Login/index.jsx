@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useCallback, useContext } from "react";
 import Logo from "@/component/Logo";
 import Link from "next/link";
+import { userContext } from "@/context/userProvider";
 
 const Login = () => {
+  const { loginUserData, changeLoginUserData } = useContext(userContext);
+
   return (
     <div className="grid grid-cols-2 w-screen h-screen">
       <div className="flex justify-center items-center">
@@ -17,13 +20,23 @@ const Login = () => {
           <h2 className="text-lg">Welcome Back, Please enter your details</h2>
           <input
             type="text"
+            name="email"
+            onChange={(e) => {
+              changeLoginUserData(e.target.name, e.target.value);
+            }}
             placeholder="Email"
             className="input input-bordered w-screen max-w-xs bg-slate-100"
+            value={loginUserData.email}
           />
           <input
             type="text"
             placeholder="Password"
+            name="password"
+            onChange={(e) => {
+              changeLoginUserData(e.target.name, e.target.value);
+            }}
             className="input input-bordered w-screen max-w-xs bg-slate-100"
+            value={loginUserData.password}
           />
           <button className="btn btn-primary w-full rounded-3xl text-xl text-white">
             Log in

@@ -23,7 +23,7 @@ const signin = async (req, res) => {
     const isCheck = bcrypt.compareSync(userPassword, findUser[0].password);
 
     if (!isCheck) {
-      return res.status(400).json({ message: "wrong username or password" });
+      return res.status(404).json({ message: "wrong username or password" });
     }
 
     const { password, ...user } = findUser[0];
@@ -65,5 +65,9 @@ const catdel = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: "failed" });
   }
+  const posttran = async (req, res) => {
+    try {
+    } catch (error) {}
+  };
 };
 module.exports = { signup, signin, catadd, catput, catdel };
