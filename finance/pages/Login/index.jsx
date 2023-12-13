@@ -1,11 +1,12 @@
 import React, { useCallback, useContext } from "react";
 import Logo from "@/component/Logo";
 import Link from "next/link";
-import { userContext } from "@/context/userProvider";
+import { userContext } from "@/context";
+import { useRouter } from "next/router";
 
 const Login = () => {
-  const { loginUserData, changeLoginUserData } = useContext(userContext);
-
+  const { loginUserData, changeLoginUserData,login } = useContext(userContext);
+  const router = useRouter();
   return (
     <div className="grid grid-cols-2 w-screen h-screen">
       <div className="flex justify-center items-center">
@@ -38,14 +39,15 @@ const Login = () => {
             className="input input-bordered w-screen max-w-xs bg-slate-100"
             value={loginUserData.password}
           />
-          <button className="btn btn-primary w-full rounded-3xl text-xl text-white">
+          <button className="btn btn-primary w-full rounded-3xl text-xl text-white"
+          onClick={login}>
             Log in
           </button>
           <div className="flex">
             <h2>Don’t have account ?</h2>
-            <Link href={"../Signup"}>
-              <span className="mx-2 text-blue-600 cursor-pointer">Sign Up</span>
-            </Link>
+              <span className="mx-2 text-blue-600 cursor-pointer"
+              onClick={() => router.push("/Signup")}
+              >Sign Up</span>
           </div>
         </div>
       </div>

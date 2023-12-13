@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import UserProvider from "@/context/userProvider";
+import UserProvider from "@/context";
 import { Toast } from "react-toastify";
 
 export default function App({ Component, pageProps }) {
