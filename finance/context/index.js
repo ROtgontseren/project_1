@@ -32,18 +32,17 @@ const userProvider = ({ children }) => {
       toast.error(`${error.response.data.message}`, { autoClose: 3000 });
     }
   };
-  
+
   const logout = () => {
     setUser(null);
   };
-
 
   const signup = () => {};
 
   const changeLoginUserData = (key, value) => {
     setloginUserData({ ...loginUserData, [key]: value });
     if (!loginUserData.email || !loginUserData.password) {
-      alert("eamil or password must check");
+      alert("email or password must check");
       return;
     }
     try {
