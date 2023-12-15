@@ -5,7 +5,7 @@ import { userContext } from "@/context";
 import { useRouter } from "next/router";
 
 const Login = () => {
-  const { loginUserData, changeLoginUserData,login } = useContext(userContext);
+  const { formUserData, changeFormUserData, login } = useContext(userContext);
   const router = useRouter();
   return (
     <div className="grid grid-cols-2 w-screen h-screen">
@@ -23,31 +23,36 @@ const Login = () => {
             type="text"
             name="email"
             onChange={(e) => {
-              changeLoginUserData(e.target.name, e.target.value);
+              changeFormUserData(e.target.name, e.target.value);
             }}
             placeholder="Email"
             className="input input-bordered w-screen max-w-xs bg-slate-100"
-            value={loginUserData.email}
+            value={formUserData.email}
           />
           <input
             type="text"
             placeholder="Password"
             name="password"
             onChange={(e) => {
-              changeLoginUserData(e.target.name, e.target.value);
+              changeFormUserData(e.target.name, e.target.value);
             }}
             className="input input-bordered w-screen max-w-xs bg-slate-100"
-            value={loginUserData.password}
+            value={formUserData.password}
           />
-          <button className="btn btn-primary w-full rounded-3xl text-xl text-white"
-          onClick={login}>
+          <button
+            className="btn btn-primary w-full rounded-3xl text-xl text-white"
+            onClick={login}
+          >
             Log in
           </button>
           <div className="flex">
             <h2>Don’t have account ?</h2>
-              <span className="mx-2 text-blue-600 cursor-pointer"
+            <span
+              className="mx-2 text-blue-600 cursor-pointer"
               onClick={() => router.push("/Signup")}
-              >Sign Up</span>
+            >
+              Sign Up
+            </span>
           </div>
         </div>
       </div>

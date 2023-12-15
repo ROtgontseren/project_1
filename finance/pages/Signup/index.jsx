@@ -1,8 +1,14 @@
 import React from "react";
+import { useContext } from "react";
 import Logo from "@/component/Logo";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { userContext } from "@/context";
 
 const Signup = () => {
+  const router = useRouter();
+  const { loading, signup, formUserData, changeFormUserData } =
+    useContext(userContext);
   return (
     <div className="grid grid-cols-2 w-screen h-screen">
       <div className="flex justify-center items-center">
@@ -18,24 +24,48 @@ const Signup = () => {
           <input
             type="text"
             placeholder="Name"
+            name="name"
+            onChange={(e) => {
+              changeFormUserData(e.target.name, e.target.value);
+            }}
+            value={formUserData.name}
             className="input input-bordered w-screen max-w-xs bg-slate-100"
           />
           <input
             type="text"
+            name="email"
+            onChange={(e) => {
+              changeFormUserData(e.target.name, e.target.value);
+            }}
             placeholder="Email"
+            value={formUserData.email}
             className="input input-bordered w-screen max-w-xs bg-slate-100"
           />
           <input
             type="text"
             placeholder="Password"
+            name="password"
+            value={formUserData.password}
+            onChange={(e) => {
+              changeFormUserData(e.target.name, e.target.value);
+            }}
             className="input input-bordered w-screen max-w-xs bg-slate-100"
           />
           <input
             type="text"
             placeholder="Re-password"
+            name="rePassword"
+            value={formUserData.rePassword}
+            onChange={(e) => {
+              changeFormUserData(e.target.name, e.target.value);
+            }}
             className="input input-bordered w-screen max-w-xs bg-slate-100"
           />
-          <button className="btn btn-primary w-full rounded-3xl text-xl text-white">
+          <button
+            className="btn btn-primary w-full rounded-3xl text-xl text-white"
+            onClick={signup}
+            disabled={loading}
+          >
             Sign up
           </button>
           <div className="flex">

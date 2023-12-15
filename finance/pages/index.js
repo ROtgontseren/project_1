@@ -1,7 +1,8 @@
 import React from "react";
-import { useContext,useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
 import { userContext } from "@/context";
+import Dashboard from "./dashboard";
 
 export default function Home() {
   const router = useRouter();
@@ -18,7 +19,7 @@ export default function Home() {
   }
   return (
     <div className="w-screen h-screen bg-slate-300">
-      <h1>hello</h1>
+      <Dashboard />
     </div>
   );
 }

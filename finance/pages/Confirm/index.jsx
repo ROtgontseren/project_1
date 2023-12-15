@@ -1,8 +1,8 @@
 import React from "react";
 import Logo from "@/component/Logo";
-import Currency from "@/component/Currency";
-import Balance from "@/component/Balance";
-import Finish from "@/component/Finish";
+import Currency from "@/component/Steps/Currency";
+import Balance from "@/component/Steps/Balance";
+import Finish from "@/component/Steps/Finish";
 
 const Confirm = () => {
   return (
